@@ -28,7 +28,7 @@ class Users(Base):
     chat_id = Column(Integer)
     first_name = Column(String(64), nullable=False)
     last_name = Column(String(64), nullable=False)
-    username = Column(String(64), nullable=False)
+    username = Column(String(64), nullable=True)
     ref_user_id = Column(Integer, ForeignKey("users.id"))
     registration_date = Column(Date,
                                default=datetime.datetime.now().date(),
